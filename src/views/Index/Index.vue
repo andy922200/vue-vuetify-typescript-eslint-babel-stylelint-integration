@@ -4,8 +4,13 @@
     </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+import {
+    lyricsAPIs
+} from '../../utils/apis'
+
+export default Vue.extend({
     name: 'Index',
     created () {
         this.test()
@@ -13,13 +18,18 @@ export default {
     methods: {
         async test () {
             try {
-                console.log('start test for async in IE11 / Google Chrome')
+                // This is for demo use.
+                const res = await lyricsAPIs.getASongLyric({
+                    artist: 'adele',
+                    title: 'hello'
+                })
+                console.log('res', res)
             } catch (err) {
                 console.log(err)
             }
         }
     }
-}
+})
 </script>
 
 <style scoped lang="scss" src="./styles/Index.scss"></style>

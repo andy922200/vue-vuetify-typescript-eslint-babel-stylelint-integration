@@ -11,6 +11,7 @@
     "report": "vue-cli-service build --report"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "css-vars-ponyfill": "^2.4.2",
     "dayjs": "^1.9.7",
