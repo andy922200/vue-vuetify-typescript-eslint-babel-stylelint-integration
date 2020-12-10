@@ -5,12 +5,20 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "check-css": "stylelint **/*.{scss,css,vue}",
+    "format": "vue-cli-service lint --fix",
+    "format-css": "stylelint **/*.{scss,css,vue} --fix",
+    "report": "vue-cli-service build --report"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "css-vars-ponyfill": "^2.4.2",
+    "dayjs": "^1.9.7",
+    "material-design-icons-iconfont": "^5.0.1",
+    "roboto-fontface": "*",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vuetify": "^2.2.11",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -31,8 +39,14 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.12.0",
+    "sass": "^1.19.0",
     "sass-loader": "^8.0.2",
+    "stylelint": "^13.8.0",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0",
     "typescript": "~3.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-cli-plugin-vuetify": "~2.0.8",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.3.0"
   }
 }

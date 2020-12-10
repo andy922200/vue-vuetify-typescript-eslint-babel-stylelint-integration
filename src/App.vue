@@ -1,32 +1,52 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <v-app id="vuefify-app">
+            <v-container fluid>
+                <div class="app__wrapper">
+                    <Navbar />
+                    <Navigation />
+                    <router-view />
+                </div>
+            </v-container>
+        </v-app>
     </div>
-    <router-view/>
-  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import Vue from 'vue'
+import Navbar from './generalComponents/Navbar.vue'
+import Navigation from './generalComponents/Navigation.vue'
+import {
+    mapGetters, mapMutations
+} from 'vuex'
 
-#nav {
-  padding: 30px;
+export default Vue.extend({
+    name: 'App',
+    components: {
+        Navbar,
+        Navigation
+    },
+    created () {
+        this.setWindowWidth(window.innerWidth)
+        window.addEventListener('resize', this.activateWidthTrigger)
+    },
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    destroyed () {
+        window.removeEventListener('resize', this.activateWidthTrigger)
+    },
 
-    &.router-link-exact-active {
-      color: #42b983;
+    computed: {
+        ...mapGetters(['today', 'leftNavigationStatus', 'windowWidth'])
+    },
+
+    methods: {
+        ...mapMutations(['setWindowWidth']),
+
+        activateWidthTrigger () {
+            this.setWindowWidth(window.innerWidth)
+        }
     }
-  }
-}
-</style>
+})
+</script>
+
+<style lang="scss" src="./styles/App.scss"></style>
