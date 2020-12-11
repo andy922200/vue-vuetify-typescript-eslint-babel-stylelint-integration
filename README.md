@@ -1,7 +1,7 @@
 # Vue + Vuetify + TypeScript Integrated Template 整合模板
 
 <p align="center">
-    <img src="./iconForReadme.png" alt="CocktailsLogo" width="256" height="256">
+    <img src="./iconForReadme.png" alt="logo" width="256" height="147">
 </p>
 
 ## Table of Contents
