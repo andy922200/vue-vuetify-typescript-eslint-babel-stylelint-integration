@@ -9,7 +9,7 @@
             @click="triggerLeftNavigation(!leftNavigationStatus)"
         />
 
-        <v-toolbar-title>Ecv-atlas-Web-CMP</v-toolbar-title>
+        <v-toolbar-title>Vue+TypeScript+Integration</v-toolbar-title>
 
         <v-spacer />
 
