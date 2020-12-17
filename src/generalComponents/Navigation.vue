@@ -13,24 +13,20 @@
                 dense
             >
                 <v-list-item-group
-                    v-model="itemsGroup"
                     active-class="deep-purple--text text--accent-4"
                 >
-                    <v-list-item>
-                        <v-list-item-title>Foo</v-list-item-title>
+                    <v-list-item :to="{name:'Intro'}">
+                        <v-list-item-title>Intro</v-list-item-title>
                     </v-list-item>
 
-                    <v-list-item>
-                        <v-list-item-title>Bar</v-list-item-title>
+                    <v-list-item :to="{name:'About'}">
+                        <v-list-item-title>About</v-list-item-title>
                     </v-list-item>
 
-                    <v-list-item>
-                        <v-list-item-title>Fizz</v-list-item-title>
+                    <v-list-item :to="{name:'Board'}">
+                        <v-list-item-title>Board</v-list-item-title>
                     </v-list-item>
 
-                    <v-list-item>
-                        <v-list-item-title>Buzz</v-list-item-title>
-                    </v-list-item>
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
@@ -45,12 +41,6 @@ import {
 
 export default Vue.extend({
     name: 'Navigation',
-    data () {
-        return {
-            itemsGroup: null
-        }
-    },
-
     computed: {
         ...mapGetters({
             leftNavigationModel: 'leftNavigationStatus'
@@ -74,12 +64,6 @@ export default Vue.extend({
             if (!status) {
                 this.triggerLeftNavigation(false)
             }
-        }
-    },
-
-    watch: {
-        itemsGroup () {
-            this.triggerLeftNavigation(!this.leftNavigationModel)
         }
     }
 })
