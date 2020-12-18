@@ -67,6 +67,16 @@ $ npm run check-css
 $ npm run format-css
 ```
 
+**7. Execute Unit Test**
+```
+$ npm run test
+```
+
+**8. Clean Unit Test Cache**
+```
+$ npm run test-clean
+```
+
 ## Related Articles
 If you would like to read the essential details, please read the following posts on my blog. ( Traditional Chinese Only )
 - [[筆記] Vuetify + Babel + Vue.config.js 最佳化實踐](https://smlpoints.com/notes-vuetify-babel-vue-config-js-best-practice.html) 
