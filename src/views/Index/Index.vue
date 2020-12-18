@@ -12,6 +12,11 @@ import {
 
 export default Vue.extend({
     name: 'Index',
+    data () {
+        return {
+            lyric: ''
+        }
+    },
     created () {
         this.test()
     },
@@ -23,7 +28,7 @@ export default Vue.extend({
                     artist: 'adele',
                     title: 'hello'
                 })
-                console.log('res', res)
+                this.lyric = res.data.lyric
             } catch (err) {
                 console.log(err)
             }

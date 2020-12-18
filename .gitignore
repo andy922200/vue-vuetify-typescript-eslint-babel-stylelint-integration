@@ -3,6 +3,7 @@ node_modules
 /dist
 .env*
 .gitignore
+/coverage
 
 # local env files
 .env.local

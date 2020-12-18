@@ -1,4 +1,6 @@
 module.exports = {
+    collectCoverage: true,
+    collectCoverageFrom: ['**/*.vue', '!**/node_modules/**'],
     moduleFileExtensions: [
         'js',
         'ts',
@@ -13,6 +15,6 @@ module.exports = {
     testURL: 'http://localhost/',
     testRegex: [
         '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-        '/src/*/*/tests/*.spec.(ts|js)$/'
+        '/src/*/*.spec.(ts|js)$/'
     ]
 }
