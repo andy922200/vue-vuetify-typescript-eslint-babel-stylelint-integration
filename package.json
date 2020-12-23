@@ -9,8 +9,9 @@
     "format": "vue-cli-service lint --fix",
     "format-css": "stylelint **/*.{scss,css,vue} --fix",
     "report": "vue-cli-service build --report",
-    "test": "jest",
-    "test-clean": "npx jest --clearCache"
+    "test-jest": "jest",
+    "test-jest-clean": "npx jest --clearCache",
+    "test-e2e": "testcafe chrome ./**/*.e2e.test.ts --app \"npm run serve\" --app-init-delay 8000 -S -s screenshots"
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -54,6 +55,7 @@
     "stylelint": "^13.8.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-config-standard": "^20.0.0",
+    "testcafe": "^1.9.0",
     "ts-jest": "^26.4.4",
     "typescript": "~3.9.3",
     "vue-cli-plugin-vuetify": "~2.0.8",

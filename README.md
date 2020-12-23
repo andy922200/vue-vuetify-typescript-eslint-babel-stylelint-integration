@@ -1,4 +1,4 @@
-# Vue + Vuetify + TypeScript + Jest Integrated Template 整合模板
+# Vue + Vuetify + TypeScript + Jest + TestCafe Integrated Template 整合模板
 
 <p align="center">
     <img src="./iconForReadme.png" alt="logo" width="256" height="147">
@@ -16,6 +16,8 @@
 - [Vuetify](https://vuetifyjs.com/en/) - Vuetify is a Vue UI Library with beautifully handcrafted Material Components.
 - [TypeScript](https://www.typescriptlang.org/) - TypeScript extends JavaScript by adding types.
 - [Vue Test Utils with Jest](https://vue-test-utils.vuejs.org/guides/) - Vue Test Utils is the official unit testing utility library for Vue.js.
+- [TestCafe](https://devexpress.github.io/testcafe/) - A node.js tool to automate
+end-to-end web testing
 - [Dayjs](https://day.js.org/) - Fast 2kB alternative to Moment.js with the same modern API
 - [Babel Compiler](https://babeljs.io/) - Use next generation JavaScript, today.
 - [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
@@ -69,12 +71,16 @@ $ npm run format-css
 
 **7. Execute Unit Test**
 ```
-$ npm run test
+$ npm run test-jest
 ```
 
 **8. Clean Unit Test Cache**
 ```
-$ npm run test-clean
+$ npm run test-jest-clean
+```
+**9. Execute E2E Test**
+```
+$ npm run test-e2e
 ```
 
 ## Related Articles
