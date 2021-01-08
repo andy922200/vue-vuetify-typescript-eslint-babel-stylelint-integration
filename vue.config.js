@@ -1,7 +1,10 @@
 module.exports = {
     publicPath: './',
     css: {
-        extract: true,
+        extract: process.env.NODE_ENV !== 'production' ? undefined : {
+            filename: '[name].css',
+            chunkFilename: '[id].css'
+        },
         sourceMap: true
     },
     configureWebpack: {
