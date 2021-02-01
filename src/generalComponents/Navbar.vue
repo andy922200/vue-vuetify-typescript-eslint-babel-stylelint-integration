@@ -14,11 +14,11 @@
         <v-spacer />
 
         <v-btn icon>
-            <v-icon>mdi-magnify</v-icon>
+            <v-icon>search</v-icon>
         </v-btn>
 
         <v-btn icon>
-            <v-icon>mdi-dots-vertical</v-icon>
+            <v-icon>more_vert</v-icon>
         </v-btn>
 
         <template v-slot:extension>
