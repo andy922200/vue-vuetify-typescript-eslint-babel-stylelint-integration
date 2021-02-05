@@ -1,4 +1,8 @@
-const data = {
+import {
+    Module
+} from 'vuex'
+
+const authenticationModule: Module<any, any> = {
     namespaced: true,
 
     state: {
@@ -14,4 +18,4 @@ const data = {
     }
 }
 
-export default data
+export default authenticationModule

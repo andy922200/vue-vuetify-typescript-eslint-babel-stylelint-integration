@@ -9,7 +9,7 @@ dayjs.extend(relativeTime)
 dayjs.extend(customParseFormat)
 
 // import customized Modules
-import authentication from './modules/authentication'
+import authenticationModule from './modules/authentication'
 
 Vue.use(Vuex)
 
@@ -43,6 +43,6 @@ export default new Vuex.Store({
         }
     },
     modules: {
-        authentication
+        authenticationModule
     }
 })
