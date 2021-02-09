@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <p>This is Index Page</p>
+        <p>{{ $t("index.title") }}</p>
     </div>
 </template>
 

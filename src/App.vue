@@ -36,7 +36,7 @@ export default Vue.extend({
     },
 
     computed: {
-        ...mapGetters(['today', 'leftNavigationStatus', 'windowWidth'])
+        ...mapGetters(['today', 'leftNavigationStatus', 'windowWidth', 'selectedLanguage'])
     },
 
     methods: {

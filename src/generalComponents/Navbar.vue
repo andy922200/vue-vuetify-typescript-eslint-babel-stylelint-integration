@@ -13,6 +13,24 @@
 
         <v-spacer />
 
+        <div class="languageSelection">
+            <v-select
+                v-model="selectedLanguageModel"
+                :items="LayoutLanguages"
+                item-text="title"
+                item-value="param"
+                menu-props="auto"
+                label="Select"
+                prepend-icon="language"
+                hide-details
+                single-line
+                dense
+                solo
+            ></v-select>
+        </div>
+
+        <v-spacer />
+
         <v-btn icon>
             <v-icon>search</v-icon>
         </v-btn>
@@ -44,10 +62,14 @@ import Vue from 'vue'
 import {
     mapGetters, mapActions
 } from 'vuex'
+import {
+    LayoutLanguages
+} from '@/i18n/config/locales'
 
 export default Vue.extend({
     name: 'Navbar',
     data: () => ({
+        LayoutLanguages,
         tab: 0,
         items: [
             {
@@ -66,11 +88,20 @@ export default Vue.extend({
     }),
 
     computed: {
-        ...mapGetters(['leftNavigationStatus'])
+        ...mapGetters(['leftNavigationStatus', 'selectedLanguage']),
+        selectedLanguageModel: {
+            get () {
+                return this.$i18n.locale
+            },
+            set (value: string) {
+                this.$i18n.locale = value
+                this.selectNewDefaultLanguage(value)
+            }
+        }
     },
 
     methods: {
-        ...mapActions(['triggerLeftNavigation'])
+        ...mapActions(['selectNewDefaultLanguage', 'triggerLeftNavigation'])
     }
 })
 </script>

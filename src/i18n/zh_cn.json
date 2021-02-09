@@ -1,0 +1,37 @@
+{
+    "index": {
+        "title": "这是首页"
+    },
+    "about": {
+        "title": "这是关于页"
+    },
+    "intro": {
+        "titles": {
+            "main": "欢迎来到你的 Vue.js + TypeScript",
+            "links": "相关链结"
+        },
+        "headline": "更多有关客制化您的专案资讯<br />请上 <a href=\"https://cli.vuejs.org\" target=\"_blank\" rel=\"noopener\">阅读 Vue-cli 向导</a>.",
+        "essentialLinks": {
+            "coreDocs": {
+                "caption": "核心文件",
+                "url": "https://vuejs.org"
+            },
+            "forum": {
+                "caption": "论坛",
+                "url": "https://forum.vuejs.org"
+            },
+            "communityChat": {
+                "caption": "讨论群",
+                "url": "https://chat.vuejs.org"
+            },
+            "twitter": {
+                "caption": "Twitter",
+                "url": "https://twitter.com/vuejs"
+            },
+            "news": {
+                "caption": "最新消息",
+                "url": "https://news.vuejs.org"
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "index": {
+        "title": "這是首頁"
+    },
+    "about": {
+        "title": "這是關於頁"
+    },
+    "intro": {
+        "titles": {
+            "main": "歡迎來到你的 Vue.js + TypeScript",
+            "links": "相關連結"
+        },
+        "headline": "更多有關客製化你的專案的資訊<br />請上 <a href=\"https://cli.vuejs.org\" target=\"_blank\" rel=\"noopener\">觀看 Vue-cli 指南</a>.",
+        "essentialLinks": {
+            "coreDocs": {
+                "caption": "核心文件",
+                "url": "https://vuejs.org"
+            },
+            "forum": {
+                "caption": "論壇",
+                "url": "https://forum.vuejs.org"
+            },
+            "communityChat": {
+                "caption": "社群討論",
+                "url": "https://chat.vuejs.org"
+            },
+            "twitter": {
+                "caption": "Twitter",
+                "url": "https://twitter.com/vuejs"
+            },
+            "news": {
+                "caption": "最新消息",
+                "url": "https://news.vuejs.org"
+            }
+        }
+    }
+}
