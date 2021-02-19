@@ -1,4 +1,4 @@
-# Vue + Vuetify + TypeScript + Jest + TestCafe Integrated Template 整合模板
+# Vue2 + Vuetify + TypeScript + Jest + TestCafe + i18N Integrated Template 整合模板
 
 <p align="center">
     <img src="./iconForReadme.png" alt="logo" width="256" height="147">
@@ -15,6 +15,7 @@
 - [Vue 2](https://vuejs.org/) - The Progressive JavaScript Framework.
 - [Vuetify](https://vuetifyjs.com/en/) - Vuetify is a Vue UI Library with beautifully handcrafted Material Components.
 - [TypeScript](https://www.typescriptlang.org/) - TypeScript extends JavaScript by adding types.
+- [Vue I18n](https://kazupon.github.io/vue-i18n/) - Vue I18n is internationalization plugin for Vue.js
 - [Vue Test Utils with Jest](https://vue-test-utils.vuejs.org/guides/) - Vue Test Utils is the official unit testing utility library for Vue.js.
 - [TestCafe](https://devexpress.github.io/testcafe/) - A node.js tool to automate
 end-to-end web testing
