@@ -11,23 +11,30 @@ dayjs.extend(customParseFormat)
 // import customized Modules
 import authenticationModule from './modules/authentication'
 
-// vue-i18n
+// vue-i18n start
 import {
     Locales
 } from '@/i18n/config/locales'
 import {
     defaultLocale
 } from '@/i18n/config'
+// vue-i18n end
+
+import {
+    RootState
+} from './declarations/index'
+
+const state: RootState = {
+    today: dayjs(),
+    leftNavigationStatus: false,
+    selectedLanguage: defaultLocale,
+    windowWidth: 0
+}
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-    state: {
-        today: dayjs(),
-        leftNavigationStatus: false,
-        selectedLanguage: defaultLocale,
-        windowWidth: 0
-    },
+    state,
     getters: {
         today: state => state.today,
         leftNavigationStatus: state => state.leftNavigationStatus,

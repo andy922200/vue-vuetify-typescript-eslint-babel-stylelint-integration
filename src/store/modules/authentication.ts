@@ -1,21 +1,39 @@
 import {
-    Module
+    GetterTree, ActionTree, MutationTree
 } from 'vuex'
 
-const authenticationModule: Module<any, any> = {
-    namespaced: true,
+import {
+    RootState
+} from '../declarations/index'
 
-    state: {
-    },
+import {
+    AuthenticationModule
+} from '../declarations/authentication'
 
-    getters: {
-    },
+const state: AuthenticationModule.State = {
+    user: undefined
+}
 
-    mutations: {
-    },
+const getters: GetterTree<AuthenticationModule.State, RootState> = {
+    user: (state: AuthenticationModule.State) => state.user
+}
 
-    actions: {
+const mutations: MutationTree<AuthenticationModule.State> = {
+    setUser (state: AuthenticationModule.State, payload: AuthenticationModule.User) {
+        state.user = payload
     }
+}
+
+const actions: ActionTree<AuthenticationModule.State, RootState> = {
+
+}
+
+const authenticationModule = {
+    namespaced: true,
+    state,
+    getters,
+    mutations,
+    actions
 }
 
 export default authenticationModule
